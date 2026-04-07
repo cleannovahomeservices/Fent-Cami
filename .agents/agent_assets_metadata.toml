@@ -1,0 +1,20 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "pWF-1aXtXV6xSs5pgtx1E"
+uri = "file://artifacts/fent-cami/public/images/companionship.png"
+type = "image"
+title = "Elderly hands held gently"
+
+[[generated]]
+id = "jNx85IuNN9zNFxpNiUtu2"
+uri = "file://artifacts/fent-cami/public/images/path.png"
+type = "image"
+title = "Peaceful sunlit forest path"
+
+[[generated]]
+id = "09RyXVldTjkoRlosyCHdb"
+uri = "file://artifacts/fent-cami/public/images/family.png"
+type = "image"
+title = "Generations family peace"
