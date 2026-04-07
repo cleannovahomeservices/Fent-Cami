@@ -35,16 +35,34 @@ export default function Contacte() {
 
   const onSubmit = async (data: ContactFormValues) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(r => setTimeout(r, 1000));
-    setIsSubmitting(false);
-    
-    toast({
-      title: "Missatge enviat correctament",
-      description: "Gràcies per contactar amb Fent Camí. Ens posarem en contacte amb vosaltres el més aviat possible.",
-    });
-    
-    form.reset();
+    try {
+      const response = await fetch("https://formspree.io/f/maqlkwbj", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        toast({
+          title: "Missatge enviat correctament",
+          description: "Gràcies per contactar amb Fent Camí. Ens posarem en contacte amb vosaltres el més aviat possible.",
+        });
+        form.reset();
+      } else {
+        toast({
+          title: "Error en enviar el missatge",
+          description: "Si us plau, torna-ho a intentar o contacta'ns directament per telèfon.",
+          variant: "destructive",
+        });
+      }
+    } catch {
+      toast({
+        title: "Error de connexió",
+        description: "No s'ha pogut enviar el missatge. Comprova la connexió i torna-ho a intentar.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -78,7 +96,7 @@ export default function Contacte() {
                     <div>
                       <h3 className="font-serif font-medium text-xl mb-1">Telèfon o WhatsApp</h3>
                       <p className="text-foreground/70 font-light mb-2">Truca'ns de dilluns a divendres de 9h a 18h o envia'ns un WhatsApp.</p>
-                      <a href="tel:+34600000000" className="text-primary font-medium hover:underline text-lg">+34 600 000 000</a>
+                      <a href="tel:+34639903019" className="text-primary font-medium hover:underline text-lg">639 90 30 19</a>
                     </div>
                   </div>
 
@@ -89,7 +107,7 @@ export default function Contacte() {
                     <div>
                       <h3 className="font-serif font-medium text-xl mb-1">Correu electrònic</h3>
                       <p className="text-foreground/70 font-light mb-2">Escriu-nos i et respondrem en menys de 24 hores.</p>
-                      <a href="mailto:hola@fentcami.cat" className="text-primary font-medium hover:underline text-lg">hola@fentcami.cat</a>
+                      <a href="mailto:abel.balcellsvilanova@gmail.com" className="text-primary font-medium hover:underline text-lg">abel.balcellsvilanova@gmail.com</a>
                     </div>
                   </div>
                 </div>
