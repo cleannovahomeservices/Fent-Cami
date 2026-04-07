@@ -39,11 +39,11 @@ export function Footer() {
             <div className="space-y-3 text-background/80 font-light">
               <p className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <span>+34 600 000 000</span>
+                <a href="tel:+34639903019" className="hover:text-primary transition-colors">639 90 30 19</a>
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span>hola@fentcami.cat</span>
+                <a href="mailto:abel.balcellsvilanova@gmail.com" className="hover:text-primary transition-colors">abel.balcellsvilanova@gmail.com</a>
               </p>
             </div>
           </div>
