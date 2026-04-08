@@ -1,5 +1,5 @@
 {
-  "name": "fent-cami",
+  "name": "@workspace/fent-cami",
   "version": "0.0.0",
   "private": true,
   "type": "module",
