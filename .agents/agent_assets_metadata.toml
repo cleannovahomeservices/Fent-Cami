@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "pWF-1aXtXV6xSs5pgtx1E"
@@ -18,3 +17,9 @@ id = "09RyXVldTjkoRlosyCHdb"
 uri = "file://artifacts/fent-cami/public/images/family.png"
 type = "image"
 title = "Generations family peace"
+
+[[outputs]]
+id = "FJ_sPvrWDoRnGW5rc6uaL"
+uri = "file://screenshots/logo-fent-cami.jpg"
+type = "image"
+title = "Logo Fent Camí"
